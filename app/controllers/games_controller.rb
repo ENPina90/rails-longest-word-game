@@ -18,7 +18,7 @@ class GamesController < ApplicationController
     @word = (params[:word] || "").upcase
     @included = included?(@word, @letters)
     @english_word = english_word?(@word)
-    @score = (@word.length * 10) / time.to_i
+    @score = (@word.length * 10) / time.to_f
   end
 
   private
